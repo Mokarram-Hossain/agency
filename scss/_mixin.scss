@@ -1,0 +1,57 @@
+@mixin animate-bounce {
+    @keyframes bounce{
+        0%{
+            transform: translateY(-10px);
+        }
+        50%{
+            transform: translateY(-35px);
+        }
+        100%{
+            transform: translateY(-10px);
+        }
+    }
+}
+
+// responsive
+
+@mixin lg-device{
+    @media  (min-width:992px) and (max-width:1199px){
+        @content;
+    }
+}
+
+@mixin md-device{
+    @media  (min-width:768px) and (max-width:991px){
+        @content;
+    
+    }
+}
+
+@mixin sm-device{
+    @media  (min-width:576px) and (max-width:767px){
+        @content;
+
+    }
+}
+
+@mixin xsm-device{
+    @media  (max-width: 576px){
+        @content;
+
+    }
+}
+@mixin lg-down-device{
+    @media  (max-width: 991px){
+        @content;
+    }
+}
+@mixin lg-up-device{
+    @media  (min-width: 992px){
+        @content;
+    }
+}
+@mixin md-down-device{
+    @media  (max-width: 767px){
+        @content;
+    }
+}
